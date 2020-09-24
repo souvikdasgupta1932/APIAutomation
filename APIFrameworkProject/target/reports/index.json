@@ -1,0 +1,217 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "Get available pets",
+        "description": "",
+        "id": "crud-operations-on-pet-store-api;get-available-pets",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7848764500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user get pets on \"status\" is \"available\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 18
+                },
+                {
+                  "val": "available",
+                  "offset": 30
+                }
+              ],
+              "location": "Get.user_get_pets_on_is(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 998500,
+              "error_message": "junit.framework.AssertionFailedError: expected:\u003c179\u003e but was:\u003c85\u003e\r\n\tat junit.framework.Assert.fail(Assert.java:57)\r\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:86)\r\n\tat sd.Get.verifies_the_total_number_pets(Get.java:31)\r\n\tat ✽.And verifies the total number pets(UnderTest.feature:7)\r\n",
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "verifies the total number pets",
+            "match": {
+              "location": "Get.verifies_the_total_number_pets()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 4,
+            "name": "@Get"
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "Post new pet",
+        "description": "",
+        "id": "crud-operations-on-pet-store-api;post-new-pet",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2123281800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user post new pet",
+            "match": {
+              "location": "PostScenario.user_post_new_pet()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1752125600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Verify new pet posted",
+            "match": {
+              "location": "PostScenario.verify_new_pet_posted()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 9,
+            "name": "@Post"
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Update the pet status to sold",
+        "description": "",
+        "id": "crud-operations-on-pet-store-api;update-the-pet-status-to-sold",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1664208100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user gets the pet status",
+            "match": {
+              "location": "PutScenario.the_user_gets_the_pet_status()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1696327400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user updates the status from \"Available\" to \"Sold\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Available",
+                  "offset": 34
+                },
+                {
+                  "val": "Sold",
+                  "offset": 49
+                }
+              ],
+              "location": "PutScenario.the_user_updates_the_status_from_to(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1701462100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "verifies the status is \"Sold\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sold",
+                  "offset": 24
+                }
+              ],
+              "location": "PutScenario.verifies_the_status_is(String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 14,
+            "name": "@Post"
+          }
+        ]
+      },
+      {
+        "line": 21,
+        "name": "Delete the pet from the store",
+        "description": "",
+        "id": "crud-operations-on-pet-store-api;delete-the-pet-from-the-store",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1652988500,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user deletes the pet from the store",
+            "match": {
+              "location": "DeletePet.the_user_deletes_the_pet_from_the_store()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3270167200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "verify pet is removed",
+            "match": {
+              "location": "DeletePet.verify_pet_is_removed()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 20,
+            "name": "@Post"
+          }
+        ]
+      }
+    ],
+    "name": "CRUD operations on Pet Store API",
+    "description": "",
+    "id": "crud-operations-on-pet-store-api",
+    "keyword": "Feature",
+    "uri": "UnderTest.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Test"
+      }
+    ]
+  }
+]

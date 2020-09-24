@@ -1,0 +1,241 @@
+<html>
+<head><style type="text/css">h1 {background-color:#9999CC}
+h2 {background-color:#BBBBCC}
+h3 {background-color:#DDDDFF}
+th {border:1px solid black;background-color:#CCCCDD;}
+td{border:1px solid black;}
+table {border:1px solid black;border-collapse: collapse;}
+.chart {border:0px none black;border-collapse: collapse;background-color: none;}
+.passed {background-color:lightgreen;font-weight:bold;color:darkgreen}
+.skipped {background-color:silver;font-weight:bold;color:darkgray}
+.failed {background-color:tomato;font-weight:bold;color:darkred}
+.undefined {background-color:gold;font-weight:bold;color:goldenrod}
+.known {background-color:goldenrod;font-weight:bold;color:darkred}
+.passed_description {background-color:#D0FFD0;font-weight:bold;font-style:italic;color:black}
+.failed_description {background-color:#FFA898;font-weight:bold;font-style:italic;color:black}
+.comment {font-family:courier;font-weight:normal;font-size:small;color:black;border:1px dashed black;background-color:silver}
+.tip {font-family:courier;font-weight:normal;font-size:small;color:white;background-color:black}
+OL { counter-reset: item }
+OL>LI { display: block }
+OL>LI:before { content: counters(item, ".") " "; counter-increment: item }
+
+div.header {
+    display: block; text-align: center;
+    position: running(header);
+}
+div.footer {
+    display: block; text-align: center;
+    position: running(footer);
+}
+div.content {page-break-after: always;}
+@page {
+	 size: auto;
+     @top-center {
+     	content: "Detailed Results Report";
+	    color: silver;
+	    font-size: 14px;
+     }
+     @top-right {
+     	content: date("dd MMM, yyyy hh:mm");
+	    color: silver;
+	    font-size: 8px;
+     }
+    @bottom-right {
+    	content: "Page " counter(page) " of " counter(pages) ;
+	    color: silver;
+	    font-size: 8px;
+    }
+}
+</style>
+<title>Detailed Results Report</title>
+<meta charset="UTF-8" />
+</head>
+  <body>
+    <div class='header'></div>
+    <div class='footer'></div>
+<h1>Overview</h1>
+
+
+<table>
+	<tr><th></th><th>Passed</th><th>Failed</th><th>Known</th><th>Undefined</th><th>Total</th><th>%Passed</th></tr>
+	<tr><th>Features</th>
+		<td class="passed" id="features_passed">0</td>
+		<td class="failed" id="features_failed">1</td>
+		<td class="known" id="features_known">0</td>
+		<td class="undefined" id="features_undefined">0</td>
+		<td id="features_total">1</td>
+		<td id="features_rate">
+				0%
+		</td>
+	</tr>
+	<tr><th>Scenarios</th>
+		<td class="passed" id="scenarios_passed">3</td>
+		<td class="failed" id="scenarios_failed">1</td>
+		<td class="known" id="scenarios_known">0</td>
+		<td class="undefined" id="scenarios_undefined">0</td>
+		<td id="scenarios_total">4</td>
+		<td id="scenarios_rate">
+				75%
+		</td>
+	</tr>
+	<tr><th>Steps</th>
+		<td class="passed" id="steps_passed">8</td>
+		<td class="failed" id="steps_failed">1</td>
+		<td class="known" id="steps_known">0</td>
+		<td class="undefined" id="steps_undefined">0</td>
+		<td id="steps_total">9</td>
+		<td id="steps_rate">
+				89%
+		</td>
+	</tr>
+</table>
+<div><b>Overall Duration: 0h 00m 21s</b></div>
+
+<a id="top"></a><h1>Table of Contents</h1>
+
+<ol>
+<li> <span class="failed"><a href="#feature-2crud-operations-on-pet-store-api">CRUD operations on Pet Store API</a></span>
+	<ol>
+        <li> <span class="failed"><a href="#sc-5-crud-operations-on-pet-store-api;get-available-pets">Get available pets</a></span></li>
+        <li> <span class="passed"><a href="#sc-10-crud-operations-on-pet-store-api;post-new-pet">Post new pet</a></span></li>
+        <li> <span class="passed"><a href="#sc-15-crud-operations-on-pet-store-api;update-the-pet-status-to-sold">Update the pet status to sold</a></span></li>
+        <li> <span class="passed"><a href="#sc-21-crud-operations-on-pet-store-api;delete-the-pet-from-the-store">Delete the pet from the store</a></span></li>
+    </ol></li>
+</ol>
+
+<h1>Detailed Results Report</h1>
+
+<table width="700px">
+	<tr class="failed"><td colspan="4"><b>Feature:</b> <a id="feature-2crud-operations-on-pet-store-api">CRUD operations on Pet Store API</a></td></tr>
+    <tr class="failed">
+    	<td><small><b>Passed:</b> 3</small></td>
+        <td><small><b>Failed:</b> 1</small></td>
+        <td><small><b>Undefined:</b> 0</small></td>
+        <td><small>Duration: 21.71s</small></td>
+    </tr>
+	<tr class="failed">
+		<td colspan="4" style="padding-left:20px">
+		<table width="100%">
+				<tr class="failed">
+					<td colspan="4">
+						<b>Scenario:</b> <a id="sc-5-crud-operations-on-pet-store-api;get-available-pets">Get available pets</a>
+					</td>
+				</tr>
+                <tr class="failed">
+                	<td><small><b>Passed:</b> 1</small></td>
+                	<td><small><b>Failed:</b> 1</small></td>
+					<td><small><b>Undefined:</b> 0</small></td>
+					<td><small>Duration: 7.85s</small></td>
+				</tr>
+                <tr class="failed">
+	                <td colspan="4" style="padding-left:20px">
+						<table width="100%">
+                            	<tr class="passed">
+                            		<td><b>When </b> user get pets on &quot;status&quot; is &quot;available&quot;</td>
+                            		<td width="100">7.85s</td>
+                        		</tr>
+                            	<tr class="failed">
+                            		<td><b>And </b> verifies the total number pets</td>
+                            		<td width="100">0.00s</td>
+                        		</tr>
+    								<tr class="failed">
+										<td colspan="2">
+											<br>junit.framework.AssertionFailedError: expected:&lt;179&gt; but was:&lt;85&gt;</br><br>	at junit.framework.Assert.fail(Assert.java:57)</br><br>	at junit.framework.Assert.failNotEquals(Assert.java:329)</br><br>	at junit.framework.Assert.assertEquals(Assert.java:78)</br><br>	at junit.framework.Assert.assertEquals(Assert.java:86)</br><br>	at sd.Get.verifies_the_total_number_pets(Get.java:31)</br><br>	at ?.And verifies the total number pets(UnderTest.feature:7)</br><br></br>
+										</td>
+									</tr>
+						</table>
+					</td>
+				</tr>
+				
+                <tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr>
+				<tr class="passed">
+					<td colspan="4">
+						<b>Scenario:</b> <a id="sc-10-crud-operations-on-pet-store-api;post-new-pet">Post new pet</a>
+					</td>
+				</tr>
+                <tr class="passed">
+                	<td><small><b>Passed:</b> 2</small></td>
+                	<td><small><b>Failed:</b> 0</small></td>
+					<td><small><b>Undefined:</b> 0</small></td>
+					<td><small>Duration: 3.87s</small></td>
+				</tr>
+                <tr class="passed">
+	                <td colspan="4" style="padding-left:20px">
+						<table width="100%">
+                            	<tr class="passed">
+                            		<td><b>When </b> user post new pet</td>
+                            		<td width="100">2.12s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> Verify new pet posted</td>
+                            		<td width="100">1.75s</td>
+                        		</tr>
+						</table>
+					</td>
+				</tr>
+				
+                <tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr>
+				<tr class="passed">
+					<td colspan="4">
+						<b>Scenario:</b> <a id="sc-15-crud-operations-on-pet-store-api;update-the-pet-status-to-sold">Update the pet status to sold</a>
+					</td>
+				</tr>
+                <tr class="passed">
+                	<td><small><b>Passed:</b> 3</small></td>
+                	<td><small><b>Failed:</b> 0</small></td>
+					<td><small><b>Undefined:</b> 0</small></td>
+					<td><small>Duration: 5.06s</small></td>
+				</tr>
+                <tr class="passed">
+	                <td colspan="4" style="padding-left:20px">
+						<table width="100%">
+                            	<tr class="passed">
+                            		<td><b>When </b> the user gets the pet status</td>
+                            		<td width="100">1.66s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>Then </b> the user updates the status from &quot;Available&quot; to &quot;Sold&quot;</td>
+                            		<td width="100">1.70s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>And </b> verifies the status is &quot;Sold&quot;</td>
+                            		<td width="100">1.70s</td>
+                        		</tr>
+						</table>
+					</td>
+				</tr>
+				
+                <tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr>
+				<tr class="passed">
+					<td colspan="4">
+						<b>Scenario:</b> <a id="sc-21-crud-operations-on-pet-store-api;delete-the-pet-from-the-store">Delete the pet from the store</a>
+					</td>
+				</tr>
+                <tr class="passed">
+                	<td><small><b>Passed:</b> 2</small></td>
+                	<td><small><b>Failed:</b> 0</small></td>
+					<td><small><b>Undefined:</b> 0</small></td>
+					<td><small>Duration: 4.92s</small></td>
+				</tr>
+                <tr class="passed">
+	                <td colspan="4" style="padding-left:20px">
+						<table width="100%">
+                            	<tr class="passed">
+                            		<td><b>Then </b> the user deletes the pet from the store</td>
+                            		<td width="100">1.65s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>And </b> verify pet is removed</td>
+                            		<td width="100">3.27s</td>
+                        		</tr>
+						</table>
+					</td>
+				</tr>
+				
+                <tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr>
+		</table>
+	</td></tr><tr><td colspan="5"></td></tr>
+</table>
+
+	</body>
+</html>

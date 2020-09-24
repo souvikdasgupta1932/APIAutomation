@@ -1,0 +1,15 @@
+API
+1. Status Code -- Done
+2. Size
+3. Time-- Done
+4. Capture Cookie details- 
+5. Capture Headers
+6. Validate few Headers
+7. Capture Mission details-- [Included in Automation suite]
+8. Capture Core Details of the rocket-- [Included in Automation suite]
+9. Capture rocket Detailsflight_number": 102,
+    "name": "Starlink-11 (v1.0)",
+    "date_utc": "2020-09-03T12:46:00.000Z",
+    "date_unix": 1599137160,
+    "date_local": "2020-09-03T08:46:00-04:00",
+    "date_precision": "hour",
